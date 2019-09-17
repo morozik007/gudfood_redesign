@@ -1,0 +1,276 @@
+<% var data = {
+  title: "Expirenza",
+}; %>
+
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__text">
+        <h3 id="heroTitle">Узнай о проблемах раньше чем Facebook</h3>
+        <p>Expirenza — cовременный сервис обратной связи для бизнеса</p>
+        <a class="hero__try" href="javascript:;" data-fancybox data-src="#try-free">Попробовать</a>
+      </div>
+      <div class="hero__animation">
+        <div id="lottie"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oppo" id="opportunities">
+  <div class="container">
+    <div class="oppo__title">Возможности</div>
+
+    <div class="oppo__slider">
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Личный ответ по SMS</h3>
+            *(неограниченное колличество)
+          </div>
+          <div class="oppo__slide-image">
+            <img src="images/sms.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Всё понимает </h3>
+            Ваши клиенты могут оставить отзыв с фото, видео и даже аудио
+          </div>
+          <div class="oppo__slide-image">
+            <img src="images/ponimaet.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Всегда на связи</h3>
+            Расписать про уведомления в чат-бот
+          </div>
+          <div class="oppo__slide-image">
+            <img src="images/bot.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Держит в курсе</h3>
+            Возможности админки отчёты, ответы клиентам, аналитика
+          </div>
+          <div class="oppo__slide-image">
+            <img src="images/vkurse.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Сертификаты</h3>
+            промо-коды/сертификаты, NPS, голосовые уведомления, система скидок 
+          </div>
+          <div class="oppo__slide-image">
+            <img src="images/certificate.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Дополнительные возможности</h3>
+            промо-коды/сертификаты, NPS, голосовые уведомления, система скидок 
+          </div>
+          <div class="oppo__slide-image">
+            <img src="images/promo.svg" alt="">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="free">
+  <div class="container">
+    <div class="free__content">
+      <div class="free__text">
+        <h3>Попробовать бесплатно</h3>
+        14 дней + unlimited sms
+      </div>
+      <div class="free__form">
+        <a class="free__button" href="javascript:;" data-fancybox data-src="#try-free">Попробовать сейчас</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="container">
+    <h3>Почему Expirenza?</h3>
+
+    <div class="why__content">
+      <div class="why__item">
+        <figure>
+          <img src="images/why-qr.svg" width="72" height="128" alt="">
+        </figure>
+        Не нужно устанавливать приложение, только<br> считать QR-код
+      </div>
+      <div class="why__item">
+        <figure>
+          <img src="images/why-bubble.svg" width="180" height="103" alt="">
+        </figure>
+        Мгновенная связь клиент-руководитель
+      </div>
+      <div class="why__item">
+        <figure>
+          <img src="images/why-24.svg" width="132" height="134" alt="">
+        </figure>
+        Запуск в работу уже сегодня
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="analytics">
+  <h3>Expirenza аналитика</h3>
+  <div class="analytics__box">
+      <span class="analytics__text-1">График активности</span>
+      <span class="analytics__text-2">Общие отчёты</span>
+      <span class="analytics__text-3">Отчёты NPS</span>
+      <span class="analytics__text-4">Отчёты Промо-коды</span>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <h3>Тарифы</h3>
+  <div class="price__content">
+    <div class="price__item">
+      <div class="price__name">Business</div>
+      <div class="price__cost">
+          <span>1500</span> <small>грн / месяц<br>локация</small>
+      </div>
+      <div class="price__benefits">
+        Текст<br>
+        Фото<br>
+        Неограниченное к-во SMS<br> 
+        Аналитика<br>
+        Сертификаты<br>
+        Telegram Bot<br>
+      </div>
+      <a href="javascript:;" data-fancybox data-src="#try-free" class="price__try">Попробовать</a>
+    </div>
+
+    <div class="price__item">
+      <div class="price__name">Pro</div>
+      <div class="price__cost">
+          <span>2500</span> <small>грн / месяц<br>локация</small>
+      </div>
+      <div class="price__benefits">
+        Текст<br>
+        Фото<br>
+        Неограниченное к-во SMS<br>
+        Аналитика <br>
+        Бонусы, баллы, сертификаты<br>
+        NPS<br>
+        Telegram Bot<br>
+        SMS рассылка<br>
+      </div>
+      <a href="javascript:;" data-fancybox data-src="#try-free" class="price__try">Попробовать</a>
+    </div>
+  </div>
+</section>
+
+<section class="clients" id="clients">
+  <h3>Удерживают клиентов с нами</h3>
+  <div class="container">
+    <div class="clients__list">
+      <div class="client">
+        <img src="images/medokom-logo.svg" width="86" height="28" alt="">
+      </div>
+      <div class="client">
+        <img src="images/iqos-logo.svg" width="106" height="28" alt="">
+      </div>
+      <div class="client">
+        <img src="images/vdnh-logo.svg" width="40" height="72" alt="">
+      </div>
+      <div class="client">
+        <img src="images/citrus-logo.svg" width="110" height="28" alt="">
+      </div>
+      <div class="client">
+        <img src="images/m-logo.svg" width="32" height="32" alt="">
+      </div>
+      <div class="client">
+        <img src="images/kurazh-logo.svg" width="77" height="40" alt="">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="video" id="feedback">
+  <div class="container">
+    <div class="video__slider">
+      <div class="video__slide">
+        <div class="video__wrapper">
+          <iframe width="100%" height="" src="https://www.youtube.com/embed/1-HJ-zHiWKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="free">
+  <div class="container">
+    <div class="free__content">
+      <div class="free__text">
+        <h3>Попробовать бесплатно</h3>
+        14 дней + unlimited sms
+      </div>
+      <div class="free__form">
+        <div class="free__form">
+          <a class="free__button" href="javascript:;" data-fancybox data-src="#try-free">Попробовать сейчас</a>
+        </div>
+        <!-- <form action="send.php" method="post" id="second-try-form" class="sendForm email-form">
+          <div class="email-container">
+            <input type="text" placeholder="Введите ваш email" name="email" data-rule-required="true" data-rule-email="true" data-msg-required="Введите Ваш e-mail" data-msg-email="Введите правильный e-mail">
+          </div>
+          <button type="submit" id="second-try-submit">Попробовать сейчас</button>
+        </form> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="popup-form" style="display: none;" id="try-free">
+  <div class="popup-form__content">
+    <h3>Оформить пробный период</h3>
+    <form action="send.php" method="post" autocomplete="off" id="popup-try-form" class="sendForm">
+      <div class="row">
+        <label for="email">Ваш email</label>
+        <input type="text" name="email" data-rule-required="true" data-rule-email="true" data-msg-required="Введите Ваш e-mail" data-msg-email="Введите правильный e-mail">
+      </div>
+      <div class="row">
+        <label for="phone">Ваш телефон</label>
+        <input type="text" name="phone" id="phone" data-rule-required="true" data-msg-required="Введите Ваш номер телефона" data-msg-number="Введите правильный номер телефона">
+      </div>
+      <button type="submit" id="popup-try-submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<div id="thanks" style="display: none;">
+  <img src="../images/thanks-icon.svg" alt="">
+  <h4>Спасибо, ваша заявка отправлена</h4>
+</div>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
