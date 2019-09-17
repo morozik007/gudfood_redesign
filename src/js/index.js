@@ -17,9 +17,9 @@ $(function() {
     console.log('works');
     
 
-    $('.menu-toggle').click(function(){
-		$(this).toggleClass('active');
-		$('.navigation').toggleClass('open');
+    $('#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+		//$('.navigation').toggleClass('open');
 	});
 
     $('a.navigation__link[href^="#"]').on('click', function (e) {
