@@ -102,10 +102,6 @@ module.exports = {
         from: './src/images',
         to: './images'
       },
-      {
-        from: './src/js/lottie.js',
-        to: './js/lottie.js'
-      }
     ]),
   ].concat(htmlPlugins)
 };

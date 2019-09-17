@@ -150,6 +150,103 @@ section {
   width: 100%;
 }
 
+.nav-layer {
+  position: fixed;
+  z-index: 100;
+  left: 50px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: $grey;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+
+  &.open {
+    display: flex;
+  }
+
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 91;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 60%;
+    background: $red;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 92;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 190px;
+    background-image: url('/images/gud.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  &__content {
+    //border: 1px solid #000;
+    width: 100%;
+    position: relative;
+    z-index: 93;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 200px;
+  }
+
+  &__navigation {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__contacts {
+    width: 40%;
+    padding-left: 100px;
+  }
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+
+      &:hover {
+        color: #000;
+
+        &:before {
+          content: "→";
+          font-family: 'IBM Plex Mono', monospace;
+          position: absolute;
+          left: -34px;
+          top: -6px;
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
 //=================================================================
 
 .hero {

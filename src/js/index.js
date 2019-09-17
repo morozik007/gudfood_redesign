@@ -19,7 +19,7 @@ $(function() {
 
     $('#nav-icon4').click(function(){
 		$(this).toggleClass('open');
-		//$('.navigation').toggleClass('open');
+		$('.nav-layer').toggleClass('open');
 	});
 
     $('a.navigation__link[href^="#"]').on('click', function (e) {
