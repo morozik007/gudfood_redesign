@@ -1,6 +1,7 @@
 .env
 .idea
 /vendor
+/dist
 docker/shared/
 .DS_Store
 node_modules
