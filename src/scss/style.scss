@@ -49,14 +49,14 @@ section {
   align-items: center;
   height: 100vh;
   width: 100%;
-  border: 1px solid #000;
+  //border: 1px solid #000;
   padding: 0 100px;
 }
 
 .wrapper {
   width: 100%;
   max-width: 1274px;
-  border: 1px solid #000;
+  //border: 1px solid #000;
   margin: auto;
 }
 
@@ -93,6 +93,8 @@ section {
     text-transform: uppercase;
   }
 }
+
+//=================================================================
 
 .hero {
   background-image: url('/images/hero-bg.jpg');
@@ -209,6 +211,8 @@ section {
   }
 }
 
+//=================================================================
+
 .why {
   flex-direction: column;
 
@@ -257,7 +261,404 @@ section {
   }
 }
 
+//=================================================================
 
+.menu {
+  background: $red;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 38%;
+    background: $grey;
+  }
+
+  .wrapper {
+    z-index: 2;
+  }
+}
+
+//=================================================================
+
+.howitworks {
+  height: auto;
+  padding: 100px 100px 300px;
+  border: 1px solid #000;
+}
+
+//=================================================================
+
+.conception {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 38%;
+    background: $red;
+  }
+
+  .wrapper {
+    z-index: 2;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -60px;
+  }
+
+  &__text {
+    width: 50%;
+    padding-left: 16%;
+    padding-right: 60px;
+    padding-top: 140px;
+    //font-size: 18px;
+
+    p {
+      margin: 0 0 2rem;
+    }
+
+    a {
+      font-weight: bold;
+      color: inherit;
+    }
+  }
+
+  &__image {
+    width: 50%;
+  }
+}
+
+//=================================================================
+
+.pack {
+  position: relative;
+  background: url(/images/pack.jpg) no-repeat center center;
+  background-size: cover;
+
+  .wrapper {
+    z-index: 2;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -60px;
+  }
+
+  &__text {
+    width: 50%;
+    padding-left: 16%;
+    padding-right: 80px;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    //font-size: 18px;
+
+    p {
+      margin: 0 0 2rem;
+    }
+
+    a {
+      font-weight: bold;
+      color: inherit;
+    }
+  }
+
+  &__image {
+    width: 50%;
+  }
+}
+
+//=================================================================
+
+.budget {
+  height: auto;
+  min-height: 100vh;
+  
+  h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 50%;
+    padding-left: 16%;
+
+    &--second {
+      padding-top: 170px;
+    }
+  }
+
+  &__price {
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    font-size: 230px;
+    color: $red;
+    margin-left: -270px;
+    margin-top: -60px;
+    line-height: 1;
+    letter-spacing: -14px;
+
+    &--second {
+      margin-top: 0;
+    }
+
+    small {
+      font-size: 16px;
+      letter-spacing: 2px;
+      position: relative;
+      left: -40px;
+    }
+  }
+}
+
+//=================================================================
+
+.degustation {
+  .wrapper {
+    height: 640px;
+    background-image: url('/images/degustation.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #fff;
+    width: 68%;
+  }
+
+  &__text {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      left: -80px;
+      top: 10px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__video {
+    .hero__play {
+      position: relative;
+      right: 0px;
+      top: 20px;
+    }
+  }
+}
+
+//=================================================================
+
+.steps {
+  height: auto;
+
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__item {
+    position: relative;
+    width: 400px;
+
+    &--1 {
+      margin: 0 0 270px 32%;
+    }
+
+    &--2 {
+      margin: 0 0 230px 48%;
+    }
+
+    &--3 {
+      margin: 0 0 270px 32%;
+    }
+
+    &--4 {
+      margin: 0 0 230px 48%;
+    }
+
+    &--5 {
+      margin: 0 0 200px 32%;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      left: -70px;
+      top: 12px;
+    }
+  }
+
+  &__number {
+    font-family: 'Oswald', sans-serif;
+    white-space: nowrap;
+    font-size: 230px;
+    color: $red;
+    line-height: 1;
+    letter-spacing: -14px;
+    position: absolute;
+    top: -205px;
+    left: -190px;
+  }
+}
+
+//=================================================================
+
+.clients {
+  height: auto;
+  padding: 0 100px 300px;
+  border: 1px solid #000;
+}
+
+//=================================================================
+
+.expirenza {
+  color: #fff;
+  background: #000;
+  background-image: url('/images/expirenza.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  h2 {
+    span {
+      color: $red;
+    }
+  }
+
+  a {
+    color: inherit;
+    font-weight: bold;
+    margin-left: 16%;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 160px;
+  }
+}
+
+//=================================================================
+
+.footer {
+  position: relative;
+
+  h2 {
+    span {
+      color: $red;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0 200px;
+  }
+
+  &__messengers {
+    position: relative;
+
+    &:before {
+      content: "→";
+      position: absolute;
+      left: -40px;
+      top: -25px;
+      font-size: 40px;
+    }
+  }
+
+  &__tel {
+    width: 60%;
+    padding-left: 16%;
+  }
+
+  &__tel-number {
+    font-size: 28px;
+  }
+
+  &__social {
+    width: 40%;
+
+    a {
+      color: $red;
+      margin-right: 20px;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    font-size: 14px;
+  }
+
+  &__bottom-content {
+    padding-left: 60%;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 16%;
+      bottom: 3px;
+      height: 3px;
+      width: 100px;
+      background: $red;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+}
 
 // ================================================
 // ================================================
@@ -320,5 +721,20 @@ section {
   h4 {
     font-size: 21px;
     max-width: 300px;
+  }
+}
+
+.list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    &:before {
+      content: "+";
+      color: $red;
+      margin-right: 10px;
+      font-weight: 600;
+    }
   }
 }
