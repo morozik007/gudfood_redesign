@@ -158,13 +158,19 @@ section {
   bottom: 0;
   right: 0;
   background: $grey;
+  display: flex;
   justify-content: center;
   align-items: center;
 
-  display: none;
+  //display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
 
   &.open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
   }
 
 
