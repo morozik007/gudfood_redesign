@@ -21,6 +21,17 @@ $(function() {
 		$(this).toggleClass('open');
 		$('.nav-layer').toggleClass('open');
 	});
+    
+
+    $('.send-form-toggle').click(function(e){
+        e.preventDefault();
+		$('.order').toggleClass('open');
+	});
+
+    $('.order__close').click(function(e){
+        e.preventDefault();
+		$('.order').toggleClass('open');
+	});
 
     $('a.nav__link[href^="#"]').on('click', function (e) {
         e.preventDefault();

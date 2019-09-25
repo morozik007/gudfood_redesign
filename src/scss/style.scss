@@ -108,6 +108,8 @@ section {
       order: 2;
       background-image: url('/images/logo-black.svg');
       background-size: cover;
+      position: relative;
+      z-index: 120;
     }    
   }
 
@@ -276,6 +278,11 @@ section {
   &__contacts {
     width: 40%;
     padding-left: 100px;
+
+    a {
+      color: #000 !important;
+      text-decoration: none;
+    }
 
     @include mobile {
       display: none;
@@ -1342,6 +1349,15 @@ section {
   &__messengers {
     position: relative;
 
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $red;
+      }
+    }
+
     &:before {
       content: "→";
       position: absolute;
@@ -1358,6 +1374,15 @@ section {
   &__tel {
     width: 60%;
     padding-left: 16%;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $red;
+      }
+    }
 
     @include mobile {
       width: 100%;
@@ -1422,6 +1447,92 @@ section {
     }
   }
 }
+
+// ================================================================
+
+.order {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $grey;
+  z-index: 100;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-submit {
+    @include mobile {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .form-input {
+    color: #000;
+    margin-bottom: 30px;
+  }
+
+  .form-row {
+    @include mobile {
+      width: 100%;
+      padding-bottom: 0px;
+      margin: 0;
+    }
+  }
+
+  .form-item {
+    @include mobile {
+      width: 100%;
+      padding-right: 0px;
+    }
+  }
+
+  .sidebar__logo {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 10px;
+    cursor: pointer;
+
+    @include mobile {
+      right: auto;
+      left: 0;
+      top: -3px;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+// ================================================================
 
 // ================================================
 

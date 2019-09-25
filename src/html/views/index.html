@@ -6,8 +6,8 @@
 
 <section class="hero" id="top">
   <div class="hero__social">
-    <a href="">facebook</a>
-    <a href="">instagram</a>
+    <a href="https://www.facebook.com/GUDfoodbar/" target="_blank">facebook</a>
+    <a href="https://www.instagram.com/gudfoodatwork/" target="_blank">instagram</a>
   </div>
   <a href="#why" class="hero__scroll nav__link">↓</a>
   <div class="hero__logo">
@@ -26,23 +26,23 @@
     <div class="wrapper">
         <div class="hero__form-wrapper">
           <form action="">
-        <div class="form-row">
-          <div class="form-item">
-            <input class="form-input" type="text" name="" id="" placeholder="E-mail">
-          </div>
-          <div class="form-item">
-            <input class="form-input" type="text" name="" id="" placeholder="Ім’я">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-item">
-            <input class="form-input" type="text" name="" id="" placeholder="Телефон">
-          </div>
-          <div class="form-item">
-            <input class="form-input" type="text" name="" id="" placeholder="Компанія">
-          </div>
-        </div>
-        <button type="submit" class="btn-submit">Надіслати заявку</button>
+            <div class="form-row">
+              <div class="form-item">
+                <input class="form-input" type="text" name="" id="" placeholder="E-mail">
+              </div>
+              <div class="form-item">
+                <input class="form-input" type="text" name="" id="" placeholder="Ім’я">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <input class="form-input" type="text" name="" id="" placeholder="Телефон">
+              </div>
+              <div class="form-item">
+                <input class="form-input" type="text" name="" id="" placeholder="Компанія">
+              </div>
+            </div>
+            <button type="submit" class="btn-submit">Надіслати заявку</button>
           </form>
         </div>
     </div>
@@ -84,7 +84,7 @@
           <p>
             Ми використовуємо рецепти азійської, американської, тайської, італійської, європейської кухонь, а наші кухарі оновлюють їх що два тижні.
           </p>
-          <a href="" class="menu__all"><b>Отримати все меню</b></a>
+          <a href="" class="menu__all send-form-toggle"><b>Отримати все меню</b></a>
         </div>
       </div>
 
@@ -182,7 +182,7 @@
           Ми взяли за основу ідею, що кожен співробітник має отримати на обід ту страву, яку він би замовив
           у своєму улюбленому кафе або ресторані, але в рамках бюджету компанії.</p>
         
-        <a href="" class="conception__link">Надіслати заявку</a>
+        <a href="" class="conception__link send-form-toggle">Надіслати заявку</a>
       </div>
       <div class="conception__image">
         <img src="/images/conception.jpg" alt="">
@@ -259,7 +259,7 @@
         дегустація
         <br>
         <br>
-        <a href=""><b>Замовити</b></a>
+        <a href="" class="send-form-toggle"><b>Замовити</b></a>
       </div>
       <div class="degustation__video">
         <a href="" class="hero__play">Відео</a>
@@ -368,12 +368,12 @@
 
     <div class="footer__content">
       <div class="footer__tel">
-        <div class="footer__messengers"><b>Telegram / Viber / Whatsapp</b></div>
-        <div class="footer__tel-number"><b>+380 68 368 41 84</b></div>
+        <div class="footer__messengers"><b><a href="https://t.me/vikagudfood">Telegram</a> / <a href="viber://chat?number=+380961171635">Viber</a></Viber> / <a href="https://wa.me/+380961171635">Whatsapp</a></b></div>
+        <div class="footer__tel-number"><b><a href="tel:+380961171635">+380 68 368 41 84</a></b></div>
       </div>
       <div class="footer__social">
-        <a href="">facebook</a>
-        <a href="">instagram</a>
+        <a href="https://www.facebook.com/GUDfoodbar/" target="_blank">facebook</a>
+        <a href="https://www.instagram.com/gudfoodatwork/" target="_blank">instagram</a>
       </div>
     </div>
   </div>
@@ -386,6 +386,36 @@
       </div>
       
     </div>
+  </div>
+</section>
+
+<section class="order">
+
+  <div class="order__close">×</div>
+  <div class="sidebar__logo"></div>
+
+  <div class="wrapper">
+    <form action="form2.php" method="post" id="post2" onsubmit="ga('send', 'event', 'forma1', 'zaiava');">
+        <div class="form-row">
+					<div class="form-item">
+						<input class="form-input" type="text" name="email" id="email2" placeholder="E-mail">
+					</div>
+					<div class="form-item">
+						<input class="form-input" type="text" name="name" id="name2" placeholder="Ім’я">
+					</div>
+        </div>
+        <div class="form-row">
+					<div class="form-item">
+						<input class="form-input" type="text" name="phone" id="phone2" placeholder="Телефон">
+					</div>
+					<div class="form-item">
+						<input class="form-input" type="text" name="company" id="company2" placeholder="Компанія">
+					</div>
+        </div>
+				<button class="btn-submit" type="submit" class="fb" onclick="ga('send', 'event', 'knopka', 'zakaz');">Надіслати заявку</button>
+			</form>
+			<h2 id="form2-ok" style="display: none;">Спасибо, ваша заявка отправлена</h2>
+
   </div>
 </section>
 
