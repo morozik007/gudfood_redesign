@@ -43,9 +43,31 @@ $(function() {
         }
     });
 
-    $('.oppo__slider').slick();
-    $('.video__slider').slick({
-        dots: true
+    $('.slick-clients').slick({
+        infinite: false,
+        dots: true,
+        customPaging : function(slider, i) {
+            var number = $(slider.$slides[i].children[0].children[0]).data('number');
+            return '<div><b>'+number+'</b> &mdash; 03</div>';
+        }
+    });
+
+    $('.slick-howitworks').slick({
+        infinite: false,
+        dots: true,
+        customPaging : function(slider, i) {
+            var number = $(slider.$slides[i].children[0].children[0]).data('number');
+            return '<div><b>'+number+'</b> &mdash; 04</div>';
+        }
+    });
+
+    $('.slick-menu').slick({
+        infinite: false,
+        dots: true,
+        customPaging : function(slider, i) {
+            var number = $(slider.$slides[i].children[0].children[0]).data('number');
+            return '<div><b>'+number+'</b> &mdash; 04</div>';
+        }
     });
 
     //$('#phone').inputmask({"mask": "+38(999)999-99-99"});
