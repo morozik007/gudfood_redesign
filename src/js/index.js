@@ -22,17 +22,17 @@ $(function() {
 		$('.nav-layer').toggleClass('open');
 	});
 
-    $('a.navigation__link[href^="#"]').on('click', function (e) {
+    $('a.nav__link[href^="#"]').on('click', function (e) {
         e.preventDefault();
 
         var target = this.hash;
         var $target = $(target);
 
-        $('.menu-toggle').toggleClass('active');
-        $('.navigation').toggleClass('open');
+        $('.nav-layer').removeClass('open');
+        $('#nav-icon4').removeClass('open');
 
         $('html, body').animate({
-            'scrollTop': $target.offset().top-80
+            'scrollTop': $target.offset().top
         }, 1000, 'swing');
     });
 
