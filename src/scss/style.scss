@@ -41,6 +41,10 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   line-height: 1.2;
+
+  @include mobile {
+    font-size: 2.5rem;
+  }
 }
 
 section {
@@ -51,6 +55,12 @@ section {
   width: 100%;
   //border: 1px solid #000;
   padding: 0 100px;
+
+  @include mobile {
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  
 }
 
 .wrapper {
@@ -75,6 +85,14 @@ section {
   align-items: center;
   flex-direction: column;
 
+  @include mobile {
+    bottom: auto;
+    right: 0;
+    padding: 5px 15px;
+    width: auto;
+    flex-direction: row;
+  }
+
   &__logo {
     width: 100%;
     height: 40px;
@@ -82,6 +100,21 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 11px 40px;
+
+    @include mobile {
+      width: 100px;
+      height: 36px;
+      margin: 2px 0;
+      order: 2;
+      background-image: url('/images/logo-black.svg');
+      background-size: cover;
+    }    
+  }
+
+  &__menu-toggle {
+    @include mobile {
+      //margin: 6px 0 0 6px;
+    }
   }
 
   &__text {
@@ -91,12 +124,16 @@ section {
     text-align: center;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
 #nav-icon4 {
   width: 26px;
-  height: 45px;
+  height: 26px;
   position: relative;
   margin: 0px auto;
   transform: rotate(0deg);
@@ -167,6 +204,11 @@ section {
   opacity: 0;
   transition: all 0.2s ease-in-out;
 
+  @include mobile {
+    left: 0;
+    top: 50px;
+  }
+
   &.open {
     visibility: visible;
     opacity: 1;
@@ -183,6 +225,10 @@ section {
     top: 0;
     left: 60%;
     background: $red;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &:before {
@@ -197,6 +243,10 @@ section {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% auto;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__content {
@@ -207,17 +257,29 @@ section {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 200px;
+
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__navigation {
     width: 60%;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__contacts {
     width: 40%;
     padding-left: 100px;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
@@ -237,6 +299,16 @@ section {
       color: #fff;
       position: relative;
 
+      @include mobile {
+        color: #000;
+        display: block;
+        margin: 20px 20px;
+
+        &:hover {
+          color: $red;
+        }
+      }
+
       &:hover {
         color: #000;
 
@@ -247,10 +319,24 @@ section {
           left: -34px;
           top: -6px;
           font-size: 36px;
+
+          @include mobile {
+            display: none;
+          }
         }
       }
     }
   }
+}
+
+.red-button {
+  background: $red;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-size: 18px;
 }
 
 //=================================================================
@@ -267,6 +353,11 @@ section {
   &__title {
     padding-bottom: 140px;
 
+    @include mobile {
+      font-size: 3.5rem;
+      padding-bottom: 40px;
+    }
+
     span {
       color: $red;
     }
@@ -278,6 +369,10 @@ section {
     right: 0;
     top: 0;
     padding-top: 80px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__logo-wrapper {
@@ -300,10 +395,15 @@ section {
     left: 0;
     right: 0;
     bottom: 80px;
+    
   }
 
   &__form-wrapper {
     padding: 0px 16% 0;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__play {
@@ -313,6 +413,10 @@ section {
     right: 100px;
     top: 80px;
     text-decoration: none;
+
+    @include mobile {
+      display: none;
+    }
 
     &:hover {
       color: $red;
@@ -340,6 +444,10 @@ section {
     top: 150px;
     transform: rotate(90deg);
 
+    @include mobile {
+      display: none;
+    }
+
     a {
       color: $red;
       text-decoration: none;
@@ -364,8 +472,21 @@ section {
     color: $red;
     font-size: 40px;
 
+    @include mobile {
+      right: auto;
+      left: 10px;
+    }
+
     &:hover {
       color: #fff;
+    }
+  }
+
+  .red-button {
+    display: none;
+
+    @include mobile {
+      display: block;
     }
   }
 }
@@ -375,22 +496,48 @@ section {
 .why {
   flex-direction: column;
 
+  @include mobile {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    height: auto;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     padding-top: 100px;
+
+    @include mobile {
+      flex-direction: column;
+      padding-top: 20px;
+    }
   }
 
   &__item {
     width: 33.3333%;
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 30px;
+    }
     
   }
 
   &__item-content {
     padding-left: 49%;
 
+    @include mobile {
+      padding-left: 105px;
+    }
+
     h3 {
       margin-bottom: 50px;
+    }
+  }
+
+  &__text {
+    @include mobile {
+      margin-left: -105px;
     }
   }
 
@@ -426,6 +573,12 @@ section {
   background: $red;
   position: relative;
 
+  @include mobile {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
   h2 {
     position: relative;
     z-index: 11;
@@ -440,6 +593,10 @@ section {
     bottom: 0;
     width: 38%;
     background: $grey;
+
+    @include mobile {
+      width: 30%;
+    }
   }
 
   .wrapper {
@@ -456,12 +613,20 @@ section {
   &__text {
     width: 45%;
     padding-right: 150px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__video {
     width: 55%;
     position: relative;
     //padding-bottom: 90px;
+
+    @include mobile {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -477,6 +642,12 @@ section {
   &__name {
     padding: 35px 30px 0 40%;
     visibility: hidden;
+
+    @include mobile  {
+      padding: 30px 32% 170px 0;
+      position: relative;
+      height: 100px;
+    }
   }
 
   .slick-dots {
@@ -486,10 +657,21 @@ section {
     width: 80px;
     color: #fff;
 
+    @include mobile {
+      left: auto;
+      right: 0;
+      width: 70px;
+      color: #000;
+    }
+
     li {
       width: 100%;
       height: 20px;
       background: $red;
+
+      @include mobile {
+        background: #dedfe1;
+      }
     }
   }
 
@@ -505,6 +687,10 @@ section {
     padding-bottom: 0px;
     margin-left: 16%;
     margin-top: -60px;
+
+    @include mobile {
+      margin: 0;
+    }
   }
 
   &__intro {
@@ -520,6 +706,13 @@ section {
     align-items: center;
     color: #fff;
     padding-right: 60px;
+
+    @include mobile {
+      position: relative;
+      background: none;
+      width: 100%;
+      padding: 10px 32% 40px 0;
+    }
   }
 
   &__all {
@@ -534,6 +727,11 @@ section {
 //=================================================================
 
 .howitworks {
+  @include mobile {
+    height: auto;
+    padding-top: 80px;
+  }
+
   h2 {
     margin-bottom: 50px;
   }
@@ -543,15 +741,29 @@ section {
     flex-wrap: wrap;
     //justify-content: center;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__text {
     width: 45%;
     padding-right: 150px;
+
+    @include mobile {
+      width: 100%;
+      padding-right: 50px;
+      padding-bottom: 30px;
+    }
   }
 
   &__video {
     width: 55%;
+
+    @include mobile {
+      width: 100%;
+    }
 
     img {
       max-width: 100%;
@@ -560,6 +772,12 @@ section {
 
   .slick-dots {
     left: 45%;
+
+    @include mobile {
+      left: auto;
+      right: 0;
+      width: 80px;
+    }
   }
 }
 
@@ -567,12 +785,28 @@ section {
   position: relative;
   padding-bottom: 100px;
   margin-left: 16%;
+
+  @include mobile {
+      margin-left: 0;
+    }
 }
 
 //=================================================================
 
 .conception {
   position: relative;
+
+  @include mobile {
+    height: auto;
+  }
+
+  h2 {
+    @include mobile {
+      background: #fff;
+      margin: 0 -20px;
+      padding: 80px 20px 0;
+    }
+  }
 
   &:after {
     content: "";
@@ -593,6 +827,15 @@ section {
     display: flex;
     flex-wrap: wrap;
     margin-top: -60px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
   }
 
   &__text {
@@ -601,6 +844,13 @@ section {
     padding-right: 60px;
     padding-top: 140px;
     //font-size: 18px;
+
+    @include mobile {
+      width: auto;
+      background: #fff;
+      margin: 0 -20px;
+      padding: 40px 20px;
+    }
 
     p {
       margin: 0 0 2rem;
@@ -614,6 +864,15 @@ section {
 
   &__image {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+      padding: 30px 0;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -624,6 +883,12 @@ section {
   background: url(/images/pack.jpg) no-repeat center center;
   background-size: cover;
 
+  @include mobile {
+    height: auto;
+    padding-top: 80px;
+    background: none;
+  }
+
   .wrapper {
     z-index: 2;
   }
@@ -632,6 +897,12 @@ section {
     display: flex;
     flex-wrap: wrap;
     margin-top: -60px;
+
+    @include mobile {
+      background: url(/images/pack-mobile.jpg) no-repeat center bottom;
+      background-size: 100%;
+      margin: 0 -20px;
+    }
   }
 
   &__text {
@@ -641,6 +912,12 @@ section {
     padding-top: 140px;
     padding-bottom: 100px;
     //font-size: 18px;
+
+    @include mobile {
+      width: 100%;
+      padding: 30px 20px 440px;
+    }
+    
 
     p {
       margin: 0 0 2rem;
@@ -662,6 +939,11 @@ section {
 .budget {
   height: auto;
   min-height: 100vh;
+
+  @include mobile {
+    padding-top: 80px;
+    margin-top: -100px;
+  }
   
   h2 {
     position: relative;
@@ -677,8 +959,19 @@ section {
     width: 50%;
     padding-left: 16%;
 
+    @include mobile {
+      width: 100%;
+      padding: 30px 0 30px !important;
+      border-bottom: solid 2px $red;
+    }
+
     &--second {
       padding-top: 170px;
+
+      @include mobile {
+        border-bottom: none !important;
+        padding-bottom: 60px !important;
+      }
     }
   }
 
@@ -692,6 +985,12 @@ section {
     line-height: 1;
     letter-spacing: -14px;
 
+    @include mobile {
+      font-size: 100px;
+      margin: 0;
+      letter-spacing: -5px;
+    }
+
     &--second {
       margin-top: 0;
     }
@@ -701,6 +1000,10 @@ section {
       letter-spacing: 2px;
       position: relative;
       left: -40px;
+
+      @include mobile {
+        left: -10px;
+      }
     }
   }
 }
@@ -708,6 +1011,11 @@ section {
 //=================================================================
 
 .degustation {
+  @include mobile {
+    padding: 0;
+    height: auto;
+  }
+
   .wrapper {
     height: 640px;
     background-image: url('/images/degustation.jpg');
@@ -717,6 +1025,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mobile {
+      height: 350px;
+      padding: 0 20px;
+    }
   }
 
   &__content {
@@ -725,6 +1038,10 @@ section {
     align-items: flex-start;
     color: #fff;
     width: 68%;
+
+    @include mobile {
+      width: 100px;
+    }
   }
 
   &__text {
@@ -760,16 +1077,30 @@ section {
 .steps {
   height: auto;
 
+  @include mobile {
+    padding-top: 30px;
+  }
+
   h2 {
     margin-top: 50px;
     margin-bottom: 50px;
     position: relative;
     z-index: 3;
+
+    @include mobile {
+
+    }
   }
 
   &__item {
     position: relative;
     width: 400px;
+
+    @include mobile {
+      width: 100%;
+      margin: 0 0 60px 0px !important;
+      padding-left: 80px;
+    }
 
     &--1 {
       margin: 0 0 270px 32%;
@@ -777,6 +1108,10 @@ section {
 
     &--2 {
       margin: 0 0 230px 48%;
+
+      @include mobile {
+        margin: 0 0 100px 0px !important;
+      }
     }
 
     &--3 {
@@ -804,6 +1139,13 @@ section {
       position: absolute;
       left: -70px;
       top: 12px;
+
+      @include mobile {
+        width: 20px;
+        left: -35px;
+
+        display: none;
+      }
     }
   }
 
@@ -817,6 +1159,12 @@ section {
     position: absolute;
     top: -205px;
     left: -190px;
+
+    @include mobile {
+      font-size: 120px;
+      top: -40px;
+      left: 0px;
+    }
   }
 }
 
@@ -826,17 +1174,33 @@ section {
   //height: auto;
   //padding: 100px 100px 200px;
 
+  @include mobile {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: -60px;
+  }
+
   h2 {
     margin-bottom: 50px;
   }
 
   &__container {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__text {
     width: 45%;
+
+    @include mobile {
+      width: 100%;
+      padding-bottom: 40px;
+    }
   }
 
   &__video {
@@ -846,10 +1210,20 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   .slick-dots {
     left: 45%;
+
+    @include mobile {
+      left: auto;
+      right: 0;
+      width: 80px;
+    }
   }
 
   .hero__play {
@@ -857,6 +1231,10 @@ section {
     right: auto;
     top: 50%;
     margin: -30px 0 0 -25px;
+
+    @include mobile {
+      display: block;
+    }
   }
 }
 
@@ -865,6 +1243,10 @@ section {
   position: relative;
   padding-bottom: 100px;
   margin-left: 16%;
+
+  @include mobile {
+      margin: 0;
+    }
 }
 
 
@@ -880,6 +1262,10 @@ section {
   background-size: cover;
   position: relative;
 
+  @include mobile {
+    height: 100vh;
+  }
+
   h2 {
     span {
       color: $red;
@@ -891,6 +1277,10 @@ section {
     font-weight: bold;
     margin-left: 16%;
 
+    @include mobile {
+      margin: 0 0 0 20px;
+    }
+
     &:hover {
       color: $red;
     }
@@ -901,6 +1291,10 @@ section {
     left: 0;
     right: 0;
     bottom: 160px;
+
+    @include mobile {
+      //bottom: 50px;
+    }
   }
 }
 
@@ -909,9 +1303,29 @@ section {
 .footer {
   position: relative;
 
+  @include mobile {
+    padding-top: 80px;
+    justify-content: start;
+    align-content: flex-start;
+    flex-direction: column;
+    //height: auto;
+
+    .wrapper {
+      margin: 0 auto;
+    }
+  }
+
+
+
   h2 {
     span {
       color: $red;
+    }
+
+    @include mobile {
+      br {
+        display: none;
+      }
     }
   }
 
@@ -919,6 +1333,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     padding: 100px 0 200px;
+
+    @include mobile {
+      padding-top: 60px;
+    }
   }
 
   &__messengers {
@@ -930,12 +1348,21 @@ section {
       left: -40px;
       top: -25px;
       font-size: 40px;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
   &__tel {
     width: 60%;
     padding-left: 16%;
+
+    @include mobile {
+      width: 100%;
+      padding: 0;
+    }
   }
 
   &__tel-number {
@@ -944,6 +1371,11 @@ section {
 
   &__social {
     width: 40%;
+
+    @include mobile {
+      width: 100%;
+      padding: 30px 0 0;
+    }
 
     a {
       color: $red;
@@ -957,11 +1389,19 @@ section {
     right: 0;
     bottom: 50px;
     font-size: 14px;
+
+    @include mobile {
+      bottom: 30px;
+    }
   }
 
   &__bottom-content {
     padding-left: 60%;
     position: relative;
+
+    @include mobile {
+      padding: 0 20px;
+    }
 
     &:before {
       content: "";
@@ -971,6 +1411,10 @@ section {
       height: 3px;
       width: 100px;
       background: $red;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     a {
