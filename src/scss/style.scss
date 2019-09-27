@@ -583,7 +583,7 @@ section {
   @include mobile {
     height: auto;
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 160px;
   }
 
   h2 {
@@ -659,10 +659,11 @@ section {
 
   .slick-dots {
     left: 45%;
-    bottom: 30px;
+    bottom: -50px;
     z-index: 10;
     width: 80px;
     color: #fff;
+    //margin-left: -120px;
 
     @include mobile {
       left: auto;
@@ -684,9 +685,13 @@ section {
 
   .slick-prev, .slick-next {
     z-index: 10;
-    bottom: 10px;
+    bottom: -60px;
     border-color: #fff;
     color: #fff;
+
+    @include mobile {
+      bottom: -70px;
+    }
   }
 
   &__content {
