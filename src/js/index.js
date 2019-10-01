@@ -77,7 +77,7 @@ $(function() {
         dots: true,
         customPaging : function(slider, i) {
             var number = $(slider.$slides[i].children[0].children[0]).data('number');
-            return '<div><b>'+number+'</b> &mdash; 11</div>';
+            return '<div><b>'+number+'</b> &mdash; 12</div>';
         }
     });
 
