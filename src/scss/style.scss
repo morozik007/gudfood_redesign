@@ -344,6 +344,14 @@ section {
   display: block;
   padding: 15px;
   font-size: 18px;
+
+}
+
+.button_disabled {
+  background: $red !important;
+  text-align: center;
+  color: #fff !important;
+  cursor: default !important;
 }
 
 //=================================================================
@@ -1486,7 +1494,6 @@ section {
 
   .form-input {
     color: #000;
-    margin-bottom: 30px;
   }
 
   .form-row {
@@ -1625,24 +1632,39 @@ section {
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .form-item {
   width: 50%;
   padding-right: 30px;
+  padding-bottom: 30px;
+  position: relative;
+
+  label.error {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    color: $red;
+    font-size: 14px;
+  }
 }
 
 .form-input {
   width: 100%;
   font-size: 18px;
-  padding: 10px;
+  padding: 10px 0;
   font-family: 'IBM Plex Mono', monospace;
 
   border: none;
   border-bottom: 1px solid #fff;
   background: none;
   color: #fff;
+
+  &.error {
+    border-bottom: 1px solid $red;
+  }
 }
 
 .btn-submit {
@@ -1655,6 +1677,13 @@ section {
   cursor: pointer;
   display: inline-block;
   margin-top: 30px;
+
+  &[disabled] {
+    background: $red !important;
+    text-align: center;
+    color: #fff !important;
+    cursor: default !important;
+  }
 
   &:hover {
     color: #000;

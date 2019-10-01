@@ -25,24 +25,24 @@
   <div class="hero__form">
     <div class="wrapper">
         <div class="hero__form-wrapper">
-          <form action="">
+          <form action="../form.php" method="post" id="send-form" onsubmit="ga('send', 'event', 'forma1', 'zaiava');">
             <div class="form-row">
               <div class="form-item">
-                <input class="form-input" type="text" name="" id="" placeholder="E-mail">
+                <input class="form-input" type="text" name="email" id="email" placeholder="E-mail" data-rule-required="true" data-rule-email="true" data-msg-required="Введіть Ваш e-mail" data-msg-email="Введіть правильний e-mail">
               </div>
               <div class="form-item">
-                <input class="form-input" type="text" name="" id="" placeholder="Ім’я">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Ім’я" data-rule-required="true" data-msg-required="Введіть Ваше ім'я">
               </div>
             </div>
             <div class="form-row">
               <div class="form-item">
-                <input class="form-input" type="text" name="" id="" placeholder="Телефон">
+                <input class="form-input" type="text" name="phone" id="phone" placeholder="Телефон" data-rule-required="true" data-msg-required="Введіть Ваш телефон">
               </div>
               <div class="form-item">
-                <input class="form-input" type="text" name="" id="" placeholder="Компанія">
+                <input class="form-input" type="text" name="company" id="company" placeholder="Компанія" data-rule-required="true" data-msg-required="Введіть назву Вашої компанії">
               </div>
             </div>
-            <button type="submit" class="btn-submit">Надіслати заявку</button>
+            <button class="btn-submit" type="submit" id="send-submit" onclick="ga('send', 'event', 'knopka', 'zakaz');" disabled>Надіслати заявку</button>
           </form>
         </div>
     </div>
@@ -496,24 +496,24 @@
   <div class="sidebar__logo"></div>
 
   <div class="wrapper">
-    <form action="form2.php" method="post" id="post2" onsubmit="ga('send', 'event', 'forma1', 'zaiava');">
+    <form action="form2.php" method="post" id="popup-send-form" onsubmit="ga('send', 'event', 'forma1', 'zaiava');">
         <div class="form-row">
 					<div class="form-item">
-						<input class="form-input" type="text" name="email" id="email2" placeholder="E-mail">
+						<input class="form-input" type="text" name="email" id="email2" placeholder="E-mail" data-rule-required="true" data-rule-email="true" data-msg-required="Введіть Ваш e-mail" data-msg-email="Введіть правильний e-mail">
 					</div>
 					<div class="form-item">
-						<input class="form-input" type="text" name="name" id="name2" placeholder="Ім’я">
+						<input class="form-input" type="text" name="name" id="name2" placeholder="Ім’я" data-rule-required="true" data-msg-required="Введіть Ваше ім'я">
 					</div>
         </div>
         <div class="form-row">
 					<div class="form-item">
-						<input class="form-input" type="text" name="phone" id="phone2" placeholder="Телефон">
+						<input class="form-input" type="text" name="phone" id="phone2" placeholder="Телефон" data-rule-required="true" data-msg-required="Введіть Ваш телефон">
 					</div>
 					<div class="form-item">
-						<input class="form-input" type="text" name="company" id="company2" placeholder="Компанія">
+						<input class="form-input" type="text" name="company" id="company2" placeholder="Компанія" data-rule-required="true" data-msg-required="Введіть назву Вашої компанії">
 					</div>
         </div>
-				<button class="btn-submit" type="submit" class="fb" onclick="ga('send', 'event', 'knopka', 'zakaz');">Надіслати заявку</button>
+				<button class="btn-submit" type="submit" id="popup-send-submit" onclick="ga('send', 'event', 'knopka', 'zakaz');" disabled>Надіслати заявку</button>
 			</form>
 			<h2 id="form2-ok" style="display: none;">Спасибо, ваша заявка отправлена</h2>
 
