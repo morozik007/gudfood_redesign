@@ -16,21 +16,25 @@ $(function() {
 
     console.log('works');
     
+    const _body = $('body');
 
     $('#nav-icon4').click(function(){
 		$(this).toggleClass('open');
 		$('.nav-layer').toggleClass('open');
+        _body.toggleClass('scroll');
 	});
     
 
     $('.send-form-toggle').click(function(e){
         e.preventDefault();
 		$('.order').toggleClass('open');
+        _body.toggleClass('scroll');
 	});
 
     $('.order__close').click(function(e){
         e.preventDefault();
 		$('.order').toggleClass('open');
+        _body.toggleClass('scroll');
 	});
 
     $('a.nav__link[href^="#"]').on('click', function (e) {
